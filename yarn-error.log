@@ -1,5 +1,5 @@
 Arguments: 
-  /home/thomas/.nvm/versions/node/v8.9.4/bin/node /usr/share/yarn/bin/yarn.js add @ttypes/react @types/react-native
+  /home/thomas/.nvm/versions/node/v8.9.4/bin/node /usr/share/yarn/bin/yarn.js run start
 
 PATH: 
   /home/thomas/.nvm/versions/node/v8.9.4/bin:/home/thomas/.local/share/umake/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin:/home/thomas/Android/Sdk/tools:/home/thomas/Android/Sdk/platform-tools
@@ -17,11 +17,17 @@ npm manifest:
   {
     "main": "node_modules/expo/AppEntry.js",
     "private": true,
+    "tsc": "tsc --watch",
     "dependencies": {
+      "@types/react": "^16.0.40",
+      "@types/react-native": "^0.52.16",
       "expo": "^25.0.0",
       "react": "16.2.0",
       "react-native": "https://github.com/expo/react-native/archive/sdk-25.0.0.tar.gz",
       "typescript": "^2.7.2"
+    },
+    "devDependencies": {
+      "babel-jest": "^22.4.1"
     }
   }
 
@@ -39,6 +45,16 @@ Lockfile:
     dependencies:
       lodash "^4.17.4"
       react-native-vector-icons "4.5.0"
+  
+  "@types/react-native@^0.52.16":
+    version "0.52.16"
+    resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.52.16.tgz#d474cdba5b44e4b695e4c918c88d3e171772c298"
+    dependencies:
+      "@types/react" "*"
+  
+  "@types/react@*", "@types/react@^16.0.40":
+    version "16.0.40"
+    resolved "https://registry.yarnpkg.com/@types/react/-/react-16.0.40.tgz#caabc2296886f40b67f6fc80f0f3464476461df9"
   
   abbrev@1:
     version "1.1.1"
@@ -174,6 +190,10 @@ Lockfile:
     version "0.2.1"
     resolved "https://registry.yarnpkg.com/array-unique/-/array-unique-0.2.1.tgz#a1d97ccafcbc2625cc70fadceb36a50c58b01a53"
   
+  arrify@^1.0.1:
+    version "1.0.1"
+    resolved "https://registry.yarnpkg.com/arrify/-/arrify-1.0.1.tgz#898508da2226f380df904728456849c1501a4b0d"
+  
   art@^0.10.0:
     version "0.10.1"
     resolved "https://registry.yarnpkg.com/art/-/art-0.10.1.tgz#38541883e399225c5e193ff246e8f157cf7b2146"
@@ -248,7 +268,7 @@ Lockfile:
       slash "^1.0.0"
       source-map "^0.5.6"
   
-  babel-generator@^6.26.0:
+  babel-generator@^6.18.0, babel-generator@^6.26.0:
     version "6.26.1"
     resolved "https://registry.yarnpkg.com/babel-generator/-/babel-generator-6.26.1.tgz#1844408d3b8f0d35a404ea7ac180f087a601bd90"
     dependencies:
@@ -370,6 +390,13 @@ Lockfile:
       babel-runtime "^6.22.0"
       babel-template "^6.24.1"
   
+  babel-jest@^22.4.1:
+    version "22.4.1"
+    resolved "https://registry.yarnpkg.com/babel-jest/-/babel-jest-22.4.1.tgz#ff53ebca45957347f27ff4666a31499fbb4c4ddd"
+    dependencies:
+      babel-plugin-istanbul "^4.1.5"
+      babel-preset-jest "^22.4.1"
+  
   babel-messages@^6.23.0:
     version "6.23.0"
     resolved "https://registry.yarnpkg.com/babel-messages/-/babel-messages-6.23.0.tgz#f3cdf4703858035b2a2951c6ec5edf6c62f2630e"
@@ -387,6 +414,18 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/babel-plugin-external-helpers/-/babel-plugin-external-helpers-6.22.0.tgz#2285f48b02bd5dede85175caf8c62e86adccefa1"
     dependencies:
       babel-runtime "^6.22.0"
+  
+  babel-plugin-istanbul@^4.1.5:
+    version "4.1.5"
+    resolved "https://registry.yarnpkg.com/babel-plugin-istanbul/-/babel-plugin-istanbul-4.1.5.tgz#6760cdd977f411d3e175bb064f2bc327d99b2b6e"
+    dependencies:
+      find-up "^2.1.0"
+      istanbul-lib-instrument "^1.7.5"
+      test-exclude "^4.1.1"
+  
+  babel-plugin-jest-hoist@^22.4.1:
+    version "22.4.1"
+    resolved "https://registry.yarnpkg.com/babel-plugin-jest-hoist/-/babel-plugin-jest-hoist-22.4.1.tgz#d712fe5da8b6965f3191dacddbefdbdf4fb66d63"
   
   babel-plugin-module-resolver@^2.7.1:
     version "2.7.1"
@@ -434,7 +473,7 @@ Lockfile:
     version "6.18.0"
     resolved "https://registry.yarnpkg.com/babel-plugin-syntax-jsx/-/babel-plugin-syntax-jsx-6.18.0.tgz#0af32a9a6e13ca7a3fd5069e62d7b0f58d0d8946"
   
-  babel-plugin-syntax-object-rest-spread@^6.8.0:
+  babel-plugin-syntax-object-rest-spread@^6.13.0, babel-plugin-syntax-object-rest-spread@^6.8.0:
     version "6.13.0"
     resolved "https://registry.yarnpkg.com/babel-plugin-syntax-object-rest-spread/-/babel-plugin-syntax-object-rest-spread-6.13.0.tgz#fd6536f2bce13836ffa3a5458c4903a597bb3bf5"
   
@@ -736,6 +775,13 @@ Lockfile:
       babel-plugin-transform-react-display-name "^6.8.0"
       babel-plugin-transform-react-jsx "^6.8.0"
   
+  babel-preset-jest@^22.4.1:
+    version "22.4.1"
+    resolved "https://registry.yarnpkg.com/babel-preset-jest/-/babel-preset-jest-22.4.1.tgz#efa2e5f5334242a9457a068452d7d09735db172a"
+    dependencies:
+      babel-plugin-jest-hoist "^22.4.1"
+      babel-plugin-syntax-object-rest-spread "^6.13.0"
+  
   babel-preset-react-native@^4.0.0:
     version "4.0.0"
     resolved "https://registry.yarnpkg.com/babel-preset-react-native/-/babel-preset-react-native-4.0.0.tgz#3df80dd33a453888cdd33bdb87224d17a5d73959"
@@ -791,7 +837,7 @@ Lockfile:
       core-js "^2.4.0"
       regenerator-runtime "^0.11.0"
   
-  babel-template@^6.24.1, babel-template@^6.26.0, babel-template@^6.3.0:
+  babel-template@^6.16.0, babel-template@^6.24.1, babel-template@^6.26.0, babel-template@^6.3.0:
     version "6.26.0"
     resolved "https://registry.yarnpkg.com/babel-template/-/babel-template-6.26.0.tgz#de03e2d16396b069f46dd9fff8521fb1a0e35e02"
     dependencies:
@@ -801,7 +847,7 @@ Lockfile:
       babylon "^6.18.0"
       lodash "^4.17.4"
   
-  babel-traverse@^6.24.1, babel-traverse@^6.26.0:
+  babel-traverse@^6.18.0, babel-traverse@^6.24.1, babel-traverse@^6.26.0:
     version "6.26.0"
     resolved "https://registry.yarnpkg.com/babel-traverse/-/babel-traverse-6.26.0.tgz#46a9cbd7edcc62c8e5c064e2d2d8d0f4035766ee"
     dependencies:
@@ -815,7 +861,7 @@ Lockfile:
       invariant "^2.2.2"
       lodash "^4.17.4"
   
-  babel-types@^6.19.0, babel-types@^6.24.1, babel-types@^6.26.0:
+  babel-types@^6.18.0, babel-types@^6.19.0, babel-types@^6.24.1, babel-types@^6.26.0:
     version "6.26.0"
     resolved "https://registry.yarnpkg.com/babel-types/-/babel-types-6.26.0.tgz#a3b073f94ab49eb6fa55cd65227a334380632497"
     dependencies:
@@ -1616,7 +1662,14 @@ Lockfile:
       json5 "^0.5.1"
       path-exists "^3.0.0"
   
-  find-up@^2.0.0:
+  find-up@^1.0.0:
+    version "1.1.2"
+    resolved "https://registry.yarnpkg.com/find-up/-/find-up-1.1.2.tgz#6b2e9822b1a2ce0a60ab64d610eccad53cb24d0f"
+    dependencies:
+      path-exists "^2.0.0"
+      pinkie-promise "^2.0.0"
+  
+  find-up@^2.0.0, find-up@^2.1.0:
     version "2.1.0"
     resolved "https://registry.yarnpkg.com/find-up/-/find-up-2.1.0.tgz#45d1b7e506c717ddd482775a2b77920a3c0c57a7"
     dependencies:
@@ -2071,6 +2124,10 @@ Lockfile:
     version "1.0.0"
     resolved "https://registry.yarnpkg.com/is-typedarray/-/is-typedarray-1.0.0.tgz#e479c80858df0c1b11ddda6940f96011fcda4a9a"
   
+  is-utf8@^0.2.0:
+    version "0.2.1"
+    resolved "https://registry.yarnpkg.com/is-utf8/-/is-utf8-0.2.1.tgz#4b0da1442104d1b336340e80797e865cf39f7d72"
+  
   isarray@0.0.1:
     version "0.0.1"
     resolved "https://registry.yarnpkg.com/isarray/-/isarray-0.0.1.tgz#8a18acfca9a8f4177e09abfc6038939b05d1eedf"
@@ -2099,6 +2156,22 @@ Lockfile:
   isstream@~0.1.2:
     version "0.1.2"
     resolved "https://registry.yarnpkg.com/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
+  
+  istanbul-lib-coverage@^1.1.2:
+    version "1.1.2"
+    resolved "https://registry.yarnpkg.com/istanbul-lib-coverage/-/istanbul-lib-coverage-1.1.2.tgz#4113c8ff6b7a40a1ef7350b01016331f63afde14"
+  
+  istanbul-lib-instrument@^1.7.5:
+    version "1.9.2"
+    resolved "https://registry.yarnpkg.com/istanbul-lib-instrument/-/istanbul-lib-instrument-1.9.2.tgz#84905bf47f7e0b401d6b840da7bad67086b4aab6"
+    dependencies:
+      babel-generator "^6.18.0"
+      babel-template "^6.16.0"
+      babel-traverse "^6.18.0"
+      babel-types "^6.18.0"
+      babylon "^6.18.0"
+      istanbul-lib-coverage "^1.1.2"
+      semver "^5.3.0"
   
   jest-docblock@22.1.0:
     version "22.1.0"
@@ -2223,6 +2296,16 @@ Lockfile:
   left-pad@^1.1.3:
     version "1.2.0"
     resolved "https://registry.yarnpkg.com/left-pad/-/left-pad-1.2.0.tgz#d30a73c6b8201d8f7d8e7956ba9616087a68e0ee"
+  
+  load-json-file@^1.0.0:
+    version "1.1.0"
+    resolved "https://registry.yarnpkg.com/load-json-file/-/load-json-file-1.1.0.tgz#956905708d58b4bab4c2261b04f59f31c99374c0"
+    dependencies:
+      graceful-fs "^4.1.2"
+      parse-json "^2.2.0"
+      pify "^2.0.0"
+      pinkie-promise "^2.0.0"
+      strip-bom "^2.0.0"
   
   load-json-file@^2.0.0:
     version "2.0.0"
@@ -2843,6 +2926,12 @@ Lockfile:
     version "1.3.2"
     resolved "https://registry.yarnpkg.com/parseurl/-/parseurl-1.3.2.tgz#fc289d4ed8993119460c156253262cdc8de65bf3"
   
+  path-exists@^2.0.0:
+    version "2.1.0"
+    resolved "https://registry.yarnpkg.com/path-exists/-/path-exists-2.1.0.tgz#0feb6c64f0fc518d9a754dd5efb62c7022761f4b"
+    dependencies:
+      pinkie-promise "^2.0.0"
+  
   path-exists@^3.0.0:
     version "3.0.0"
     resolved "https://registry.yarnpkg.com/path-exists/-/path-exists-3.0.0.tgz#ce0ebeaa5f78cb18925ea7d810d7b59b010fd515"
@@ -2858,6 +2947,14 @@ Lockfile:
   path-parse@^1.0.5:
     version "1.0.5"
     resolved "https://registry.yarnpkg.com/path-parse/-/path-parse-1.0.5.tgz#3c1adf871ea9cd6c9431b6ea2bd74a0ff055c4c1"
+  
+  path-type@^1.0.0:
+    version "1.1.0"
+    resolved "https://registry.yarnpkg.com/path-type/-/path-type-1.1.0.tgz#59c44f7ee491da704da415da5a4070ba4f8fe441"
+    dependencies:
+      graceful-fs "^4.1.2"
+      pify "^2.0.0"
+      pinkie-promise "^2.0.0"
   
   path-type@^2.0.0:
     version "2.0.0"
@@ -2884,6 +2981,16 @@ Lockfile:
   pify@^2.0.0:
     version "2.3.0"
     resolved "https://registry.yarnpkg.com/pify/-/pify-2.3.0.tgz#ed141a6ac043a849ea588498e7dca8b15330e90c"
+  
+  pinkie-promise@^2.0.0:
+    version "2.0.1"
+    resolved "https://registry.yarnpkg.com/pinkie-promise/-/pinkie-promise-2.0.1.tgz#2135d6dfa7a358c069ac9b178776288228450ffa"
+    dependencies:
+      pinkie "^2.0.0"
+  
+  pinkie@^2.0.0:
+    version "2.0.4"
+    resolved "https://registry.yarnpkg.com/pinkie/-/pinkie-2.0.4.tgz#72556b80cfa0d48a974e80e77248e80ed4f7f870"
   
   plist@2.0.1:
     version "2.0.1"
@@ -3137,12 +3244,27 @@ Lockfile:
       object-assign "^4.1.1"
       prop-types "^15.6.0"
   
+  read-pkg-up@^1.0.1:
+    version "1.0.1"
+    resolved "https://registry.yarnpkg.com/read-pkg-up/-/read-pkg-up-1.0.1.tgz#9d63c13276c065918d57f002a57f40a1b643fb02"
+    dependencies:
+      find-up "^1.0.0"
+      read-pkg "^1.0.0"
+  
   read-pkg-up@^2.0.0:
     version "2.0.0"
     resolved "https://registry.yarnpkg.com/read-pkg-up/-/read-pkg-up-2.0.0.tgz#6b72a8048984e0c41e79510fd5e9fa99b3b549be"
     dependencies:
       find-up "^2.0.0"
       read-pkg "^2.0.0"
+  
+  read-pkg@^1.0.0:
+    version "1.1.0"
+    resolved "https://registry.yarnpkg.com/read-pkg/-/read-pkg-1.1.0.tgz#f5ffaa5ecd29cb31c0474bca7d756b6bb29e3f28"
+    dependencies:
+      load-json-file "^1.0.0"
+      normalize-package-data "^2.3.2"
+      path-type "^1.0.0"
   
   read-pkg@^2.0.0:
     version "2.0.0"
@@ -3617,6 +3739,12 @@ Lockfile:
     dependencies:
       ansi-regex "^3.0.0"
   
+  strip-bom@^2.0.0:
+    version "2.0.0"
+    resolved "https://registry.yarnpkg.com/strip-bom/-/strip-bom-2.0.0.tgz#6219a85616520491f35788bdbf1447a99c7e6b0e"
+    dependencies:
+      is-utf8 "^0.2.0"
+  
   strip-bom@^3.0.0:
     version "3.0.0"
     resolved "https://registry.yarnpkg.com/strip-bom/-/strip-bom-3.0.0.tgz#2334c18e9c759f7bdd56fdef7e9ae3d588e68ed3"
@@ -3666,6 +3794,16 @@ Lockfile:
     dependencies:
       os-tmpdir "^1.0.0"
       rimraf "~2.2.6"
+  
+  test-exclude@^4.1.1:
+    version "4.2.0"
+    resolved "https://registry.yarnpkg.com/test-exclude/-/test-exclude-4.2.0.tgz#07e3613609a362c74516a717515e13322ab45b3c"
+    dependencies:
+      arrify "^1.0.1"
+      micromatch "^2.3.11"
+      object-assign "^4.1.0"
+      read-pkg-up "^1.0.1"
+      require-main-filename "^1.0.1"
   
   throat@^4.1.0:
     version "4.1.0"
@@ -4022,14 +4160,14 @@ Lockfile:
       yargs-parser "^7.0.0"
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@ttypes%2freact: Not found
-      at Request.params.callback [as _callback] (/usr/share/yarn/lib/cli.js:65019:18)
-      at Request.self.callback (/usr/share/yarn/lib/cli.js:132430:22)
-      at emitTwo (events.js:126:13)
-      at Request.emit (events.js:214:7)
-      at Request.<anonymous> (/usr/share/yarn/lib/cli.js:133413:10)
-      at emitOne (events.js:116:13)
-      at Request.emit (events.js:211:7)
-      at IncomingMessage.<anonymous> (/usr/share/yarn/lib/cli.js:133333:12)
-      at Object.onceWrapper (events.js:313:30)
-      at emitNone (events.js:111:20)
+  Error: Command "start" not found.
+      at new MessageError (/usr/share/yarn/lib/cli.js:186:110)
+      at /usr/share/yarn/lib/cli.js:87307:17
+      at Generator.next (<anonymous>)
+      at step (/usr/share/yarn/lib/cli.js:98:30)
+      at /usr/share/yarn/lib/cli.js:116:14
+      at new Promise (<anonymous>)
+      at new F (/usr/share/yarn/lib/cli.js:23451:28)
+      at /usr/share/yarn/lib/cli.js:95:12
+      at runCommand (/usr/share/yarn/lib/cli.js:87312:22)
+      at Object.<anonymous> (/usr/share/yarn/lib/cli.js:87412:14)

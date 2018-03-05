@@ -8,9 +8,9 @@
     "allowSyntheticDefaultImports": true,
     "noImplicitAny": true,
     "experimentalDecorators": true,
-    " reserveConstEnums": true,
+    "preserveConstEnums": true,
     "allowJs": true,
     "sourceMap": true
   },
-  "exclude": ["build", "node_modules", "__tests__"]
+  "exclude": ["App.js", "build", "node_modules", "__tests__"]
 }
