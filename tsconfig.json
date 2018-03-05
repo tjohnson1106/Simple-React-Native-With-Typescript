@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "es2015",
+    "module": "es2015",
+    "jsx": "react",
+    "outDir": "build",
+    "rootDir": "src",
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": true,
+    "experimentalDecorators": true,
+    " reserveConstEnums": true,
+    "allowJs": true,
+    "sourceMap": true
+  },
+  "exclude": ["build", "node_modules", "__tests__"]
+}
